@@ -1,0 +1,40 @@
+<?php 
+    include 'php/database.php'; 
+
+    $db=connect('mysql:host=localhost;dbname=db_blog','root','troiswa');
+    $db->exec("SET NAMES UTF8");
+
+    include 'php/frontController.php'; ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Administrateur</h1>
+    </header>
+
+    <main>
+    <section id="accueil">
+    <?php $tab= displayCategory($db); ?>
+    <?php include $template; ?>
+    </section>
+    <aside >
+        <div id="container">
+            <ul id="aside"> 
+                <a href="?case=create-user">Nouvel utilisateur</a>
+                <a href="?case=create-category">Nouvelle catégorie</a>
+                <a href="?case=list-user">Liste des utilisateurs</a>
+                <a href="?case=create-billet">Nouveau billet</a>
+                <a href="?case=list-billet">Liste des billets</a>
+            </ul>
+        </div>
+    </aside>
+  </main>
+</body>
+</html>

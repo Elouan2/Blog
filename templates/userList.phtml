@@ -1,0 +1,25 @@
+<section>
+    <h1>Liste des utilisateurs</h1>
+        <table id="list-user">
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>E-mail</th>
+            <th>Mot de passe</th>
+            <th>Rôle</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php foreach($user as $u): ?>
+            <tr>
+                <td><?= $u['firstname'] ?></td>
+                <td><?= $u['lastname'] ?></td>
+                <td><?= $u['email'] ?></td>
+                <td><?= $u['password'] ?></td>
+                <td><?= $u['role'] ?></td>
+            </tr>
+        <?php endforeach ?>
+        </tbody>
+        </table>
+    </section>

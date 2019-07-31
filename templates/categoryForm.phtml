@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter une catégorie :</h1>
+    </header>
+
+    <main>
+    <section>
+        <form action="" method="POST">
+            <label for="titre">Titre :</label>
+            <input type="text" name="titre">
+            <br>
+            <label for="description">Description :</label>
+            <br>
+            <textarea name="description"></textarea>
+            <select name="parent" id="">
+            <option value=""></option>
+            <?php foreach($tab as $t): ?>
+            <option value="<?= $t['id'] ?>"><?= $t['titre'] ?></option>
+            <?php endforeach ?>
+            </select>
+            <br>
+            <input type="hidden" name="case" value="create-category">
+            <br>
+            <input id="ajouter" type="submit" value="Ajouter">
+        </form>
+    </section>
+  </main>
+</body>
+</html>
+

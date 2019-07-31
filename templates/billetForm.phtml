@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Nouveau billet :</h1>
+    </header>
+
+    <main>
+    <section>
+        <form action="" method="POST">
+        <div>
+            <label for="titre">Titre :</label>
+            <input type="text" name="titre">
+        <div>
+            <label for="texte">Texte :</label>
+            <input type="text" name="texte">
+       
+        </div>
+        <div>
+            <select name="author" id="author">
+            <option value=""></option>
+            <?php foreach($user as $u): ?>
+            <option value="<?= $u['id'] ?>"><?= $u['firstname'] ?><?= $u['lastname'] ?></option>
+            <?php endforeach ?>
+            </select>
+        </div>
+        <div>
+            <input type="hidden" name="case" value="create-billet">
+            <input id="ajouter" type="submit" value="Ajouter">
+        </div>
+        </form>
+    </section>
+</main>
+</body>
+</html>

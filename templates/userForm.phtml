@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter un utilisateur :</h1>
+    </header>
+
+    <main>
+    <section>
+        <form action="" method="POST">
+            <label for="firstname">Prénom :</label>
+            <input type="text" name="firstname">
+            <br>
+            <label for="lastname">Nom :</label>
+            <input type="text" name="lastname">
+            <br>
+            <label for="email">E-mail :</label>
+            <input type="text" name="email">
+            <br>
+            <label for="password">Mot de passe :</label>
+            <input type="text" name="password">
+            <br>
+ 
+            <select name="role" id="menu">
+                <option value="superadmin">superadmin</option>
+                <option value="admin">admin</option>
+                <option value="author">auteur</option>
+                <option value="reader">lecteur</option>>
+                <option value="subscriber">abonné</option>>
+            </select>
+            <input type="hidden" name="case" value="create-user">
+            <input id="valider" type="submit" value="Valider">
+        </form>
+    </section>
+  </main>
+</body>
+</html>
+

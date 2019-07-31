@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "BodegaSans_Black";
+    src: url("../fonts/BodegaSans_Black.ttf") format("truetype");
+   }
+   @font-face {
+    font-family: "FontAwesome";
+    src: url("../fonts/fontawesome-webfont.eot") format("eot"),
+         url("../fontawesome-webfont.ttf") format("ttf"),
+         url("../fontawesome-webfont.woff") format("woff"),
+         url("../fontawesome-webfont.woff2") format("woff2");
+   }
+   * {
+     box-sizing: border-box;
+   }
+
+   body{
+     font-family: "BodegaSans_Black";
+     background-color: #444444;
+     line-height: 1.4;
+     margin: 0;
+     
+   }
+  h1{
+    text-align: center;
+    color: white;
+  }
+   header{
+     font-size: 1.5rem;
+     font-family: "BodegaSans_Black";
+     padding: 30px;
+     overflow: hidden;
+   }
+
+  main {
+    display: block
+    margin: 0 auto;
+  }
+
+  #accueil {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: darkolivegreen;
+    margin-right: 20%;
+
+  }
+
+aside a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+}
+
+  section {
+    display: block;
+    padding: 20px;
+    background-color: darkolivegreen;
+    margin: 20px 0;
+  }
+  #container{
+
+    display: flex;
+
+}
+
+#container a{
+
+    border: 1px solid white;
+
+    color: yellow;
+
+    padding: 20px;
+
+}
+
+#container a:hover{
+
+    background-color: yellow;
+
+    color: blue;
+
+}

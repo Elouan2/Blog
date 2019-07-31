@@ -1,0 +1,23 @@
+<section>
+    <h1>Liste des billets</h1>
+        <table id="list-billet">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Date</th>
+            <th>Auteur</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php foreach($affichage as $a): ?>
+            <tr>
+                <td><a href="?case=single-billet&id_billet=<?= $a['idBillet'] ?>"><?= $a['titre']; ?></a></td>
+                <td><?= $a['date']; ?></td>
+                <td><?= $a['firstname'].' '.$a['lastname']; ?></td>
+            </tr>
+        
+        <?php endforeach ?>
+        </tbody>
+        </table>
+    </section>
+

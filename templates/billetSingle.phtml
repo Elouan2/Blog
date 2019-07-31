@@ -1,0 +1,35 @@
+<section id="single-billet">
+    <h1>Billet unique :</h1>    
+
+        <p>Titre : <?= $singleAffichage[0]['titre']; ?></p>
+        <p>Prénom : <?= $singleAffichage[0]['firstname']; ?></p>
+        <p>Nom : <?= $singleAffichage[0]['lastname']; ?></p>
+        <p>Date de publication : <?= $singleAffichage[0]['date_pub']; ?></p>
+
+        <div id="content">
+        <p>Texte : <?= $singleAffichage[0]['texte']; ?></p>
+        </div>
+</section>
+<br>
+
+<section id="commentaires-billet">
+    <p>Liste des commentaires :</p>
+    <ul>
+    <?php foreach($singleAffichage as $s): ?>
+    <?php if (!empty($s['comment'])) : ?>
+    <li><?= $s['comment'] ?></li>
+    <?php endif ?>
+    <?php endforeach ?>
+    </ul>
+</section>
+    <div>
+    <p>Ajouter un commentaire :</p>
+        <form action="" method="POST">
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <input type="hidden" name="case" value="create-comment">
+            <input type="hidden" name="author" value="1">
+            <input type="hidden" name="link" value="<?= $singleAffichage[0]['id'] ?>">
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
